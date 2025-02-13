@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>أفضل السيارات للبيع</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset وإعدادات أساسية */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Cairo', 'Tajawal', sans-serif;
+      background: #f0f0f0;
+      color: #333;
+      direction: rtl;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    /* الرأس */
+    header {
+      position: relative;
+      width: 100%;
+      height: 80vh;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')
+        no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    header h1 {
+      color: #fff;
+      font-size: 4rem;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+      text-align: center;
+      padding: 0 20px;
+    }
+    /* الحاوية الرئيسية */
+    .container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    /* قائمة السيارات */
+    .car-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    /* بطاقة السيارة */
+    .car-card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .car-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+    }
+    .car-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .car-card .details {
+      padding: 20px;
+    }
+    .car-card .details h2 {
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+      color: #333;
+    }
+    .car-card .details p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 15px;
+    }
+    .car-card .details .price {
+      font-size: 1.3rem;
+      color: #e74c3c;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .btn {
+      display: inline-block;
+      background: #e74c3c;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #c0392b;
+    }
+    /* التذييل */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+    }
+    /* استجابة لأجهزة التابلت والهواتف */
+    @media (max-width: 768px) {
+      header {
+        height: 60vh;
+      }
+      header h1 {
+        font-size: 2.8rem;
+      }
+    }
+    @media (max-width: 480px) {
+      header {
+        height: 50vh;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+      .car-card .details h2 {
+        font-size: 1.5rem;
+      }
+      .car-card .details p {
+        font-size: 0.9rem;
+      }
+      .car-card .details .price {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- الرأس -->
+  <header>
+    <h1>أفضل السيارات للبيع</h1>
+  </header>
+  
+  <!-- المحتوى الرئيسي -->
+  <div class="container">
+    <div class="car-list">
+      <!-- بطاقة سيارة 1 -->
+      <div class="car-card">
+        <img src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="تويوتا كورولا 2021">
+        <div class="details">
+          <h2>تويوتا كورولا 2021</h2>
+          <p>سيارة موثوقة واقتصادية مع أداء ممتاز واستهلاك منخفض للوقود.</p>
+          <div class="price">120,000 ريال</div>
+          <a href="#" class="btn">عرض التفاصيل</a>
+        </div>
+      </div>
+      <!-- بطاقة سيارة 2 -->
+      <div class="car-card">
+        <img src="https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="هيونداي إلنترا 2020">
+        <div class="details">
+          <h2>هيونداي إلنترا 2020</h2>
+          <p>أداء مميز وتصميم عصري مع تقنيات متطورة توفر تجربة قيادة راقية.</p>
+          <div class="price">110,000 ريال</div>
+          <a href="#" class="btn">عرض التفاصيل</a>
+        </div>
+      </div>
+      <!-- بطاقة سيارة 3 -->
+      <div class="car-card">
+        <img src="https://images.pexels.com/photos/235986/pexels-photo-235986.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="شيفروليه أفيو 2019">
+        <div class="details">
+          <h2>شيفروليه أفيو 2019</h2>
+          <p>تصميم حديث وأنيق يناسب الاستخدام اليومي مع كفاءة عالية في استهلاك الوقود.</p>
+          <div class="price">90,000 ريال</div>
+          <a href="#" class="btn">عرض التفاصيل</a>
+        </div>
+      </div>
+      <!-- بطاقة سيارة 4 -->
+      <div class="car-card">
+        <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="فورد فيوجن 2018">
+        <div class="details">
+          <h2>فورد فيوجن 2018</h2>
+          <p>سيارة عائلية فسيحة مع تصميم جذاب وأداء قوي لتجربة قيادة سلسة.</p>
+          <div class="price">100,000 ريال</div>
+          <a href="#" class="btn">عرض التفاصيل</a>
+        </div>
+      </div>
+      <!-- يمكنك إضافة المزيد من بطاقات السيارات هنا -->
+    </div>
+  </div>
+  
+  <!-- التذييل -->
+  <footer>
+    &copy; 2025 موقع سيارات للبيع. جميع الحقوق محفوظة.
+  </footer>
+</body>
+</html>
